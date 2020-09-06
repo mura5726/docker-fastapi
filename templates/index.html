@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<h2>Welcome to Cazo</h2>
+<hr>
+<p>Hi, {{ user['username'] }}.</p>
+
+<br>
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <th>#</th>
+        <th>作品名</th>
+        <th>作者</th>
+        <th>内容</th>
+        <th>掲載日</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for b in book %}
+    <tr>
+        <td>{{ b['id'] }}</td>
+        <td>{{ b['title'] }}</td>
+        <td>{{ b['author'] }}</td>
+        <td>{{ b['content'] }}</td>
+        <td>{{ b['makedate'] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

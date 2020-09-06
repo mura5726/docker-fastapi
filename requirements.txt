@@ -1,0 +1,6 @@
+pip
+uvicorn
+fastapi==0.61.1
+sqlalchemy
+starlette==0.13.6
+jinja2
